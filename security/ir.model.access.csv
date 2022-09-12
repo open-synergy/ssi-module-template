@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_{model_name:replace dot with underscore}_all,{model_name} - all,model_{model_name:replace dot with underscore},,1,0,0,0
+access_{model_name:replace dot with underscore}_viewer,{model_name} - viewer,model_{model_name:replace dot with underscore},{model_name:replace dot with underscore}_viewer_group,1,0,0,0
+access_{model_name:replace dot with underscore}_user,{model_name} - user,model_{model_name:replace dot with underscore},{model_name:replace dot with underscore}_user_group,1,1,1,1
