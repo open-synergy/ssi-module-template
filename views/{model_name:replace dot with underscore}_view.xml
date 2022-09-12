@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<record id="{model_name:replace dot with underscore}_view_search" model="ir.ui.view">
+    <field name="name">{model_name} - Search</field>
+    <field name="model">{model_name}</field>
+    <field name="mode">primary</field>
+    <field name="inherit_id" ref="{inherit_view_search}"/>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="{model_name:replace dot with underscore}_view_tree" model="ir.ui.view">
+    <field name="name">{model_name} - Tree</field>
+    <field name="model">{model_name}</field>
+    <field name="mode">primary</field>
+    <field name="inherit_id" ref="{inherit_view_tree}"/>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="{model_name:replace dot with underscore}_view_form" model="ir.ui.view">
+    <field name="name">{model_name} - Form</field>
+    <field name="model">{model_name}</field>
+    <field name="mode">primary</field>
+    <field name="inherit_id" ref="{inherit_view_form}"/>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="{model_name:replace dot with underscore}_action" model="ir.actions.act_window">
+    <field name="name">{model_description}</field>
+    <field name="res_model">{model_name}</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    id="menu_{model_name:replace dot with underscore}"
+    name="{menu_name}"
+    parent="{menu_parent}"
+    action="{model_name:replace dot with underscore}_action"
+    sequence="{menu_sequence}"
+/>
+
+</odoo>
