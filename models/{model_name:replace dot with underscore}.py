@@ -12,7 +12,7 @@ class {model_name:CamelCase}(models.Model):
         "mixin.transaction_confirm",
         "mixin.transaction_done",
         "mixin.transaction_cancel",
-        "mixin.date_duration",
+        "{mixin.date_duration / mixin.datetime_duration}"
     ]
 
     # Multiple Approval Attribute
