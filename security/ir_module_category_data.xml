@@ -15,7 +15,7 @@
         model="ir.module.category"
     >
     <field name="name">{model_description}</field>
-    <field name="parent_id" ref="{parent_module_category}" />
+    <field name="parent_id" ref="{parent_data_ownership_module_category}" />
 </record>
 
 </odoo>
